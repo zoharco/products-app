@@ -1,0 +1,12 @@
+<div *ngIf="product" class="product" (click)="edit()">
+    <div class="product-image">
+        <img src="../../assets/images/{{product.image}}">
+    </div>
+    <div class="product-details">
+        <a class="product-name">{{product.name}}</a>
+        <p class="product-description">{{ product.description }}</p>
+    </div>
+    <div class="wrap-delete-product">
+        <button class="delete-product" (click)="delete()">Delete</button>
+    </div>
+</div>

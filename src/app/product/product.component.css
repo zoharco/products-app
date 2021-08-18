@@ -1,0 +1,36 @@
+.product{
+    height: 100px;
+    display: flex;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+.product-image {
+    display: flex;
+    padding: 20px 10px;
+    width: 20%;
+}
+.product-image img{
+    width: fit-content;
+}
+.product-details{
+    width: 60%;
+    margin-top: 20px;
+}
+.product-name {
+    
+}
+.product-description {
+    margin-top: 5px;
+}
+.wrap-delete-product{
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+    padding:0 10px 10px;
+}
+.delete-product {
+    width:100%;
+    height:30px;
+    background-color: peru;
+    border: 1px solid #000;
+}

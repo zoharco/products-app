@@ -1,0 +1,21 @@
+<fieldset *ngIf="product" class="product-details">
+    <legend>Edit {{ product.name }}</legend>
+    <form action="">
+        <img src="" alt="">
+        <div>
+            <label for="name">Name</label><br>
+            <input id="name" name="name"  type="text" [(ngModel)]="product.name">
+        </div>
+        <div>
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description" [(ngModel)]="product.description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input id="price" name="price" [(ngModel)]="product.price" type="text">
+        </div>
+        <div >
+            <button class="save" (click)="saveDetails()">Save</button>
+        </div>
+    </form>
+</fieldset>

@@ -1,0 +1,20 @@
+<div class="products-container">
+  
+  <div class="toolbar">
+    <button class="add-product">+ Add</button>
+    <div class="wrap-search-product">
+      <input type="text" placeholder="search products" class="search-product">
+    </div>
+  </div>
+  <div class="products-wrap">
+    <div class="products-list">
+        <app-product *ngFor="let product of products" [product]="product" (deleteProduct)="deleteProduct($event)"
+          (editProduct)="editProduct($event)"></app-product>
+      </div>
+    
+      <div class="edit-product">
+        <app-product-details [product]="productEdit" (saveProductDetails)="saveProductDetails($event)"></app-product-details>
+      </div>
+  </div>
+  
+</div>

@@ -1,0 +1,41 @@
+.products-container{
+    width: 80%;
+    margin: 20px auto;
+}
+.toolbar{
+    display: flex;
+    margin: 20px 0;
+}
+.add-product {
+    width: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.wrap-search-product{
+    padding-left: 20px;
+    padding-right: 10px;
+    background-image: url(../../assets/images/searchIcon.png);
+    border: 1px solid #000;
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search-product{
+    border: none;
+    outline: none;
+    
+}
+
+.products-wrap{
+    display: flex;
+}
+.products-list{
+    width: 60%;
+    margin-right:30px;
+}
+.edit-product{
+    width: 40%;
+    
+}
