@@ -6,11 +6,12 @@
 }
 .product-image {
     display: flex;
-    padding: 20px 10px;
+    align-items: center;
+    padding: 0 10px;
     width: 20%;
 }
 .product-image img{
-    width: fit-content;
+    width: 100%;
 }
 .product-details{
     width: 60%;

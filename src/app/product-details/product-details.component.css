@@ -1,0 +1,28 @@
+
+.product-details{
+    margin-top: -7px;
+}
+
+.edit-form{
+    width: 80%;
+    margin: auto;
+
+}
+
+.image-wrap{
+    margin-bottom: 10px;
+}
+.image-wrap img{
+    width: 100%;
+}
+
+.form-control-wrap{
+    margin-bottom: 10px;
+}
+.form-control-wrap input, .form-control-wrap textarea{
+    width: 100%;
+}
+
+.btn-wrap{
+
+}

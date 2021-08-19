@@ -26,15 +26,17 @@ export class ProductsComponent implements OnInit {
     this.products = this.products.filter(product => product.id !== productid);
   }
 
-  editProduct(productId: number): void{
-    this.productEdit = this.products.find(prd => prd.id === productId);
-  }
+  editProduct(product: Product): void{
+    this.productEdit = product;
+  }     
 
-  saveProductDetails(product: Product){
-    this.products = this.products.map(prd => {
-        if(prd.id === product.id)
-            prd = product;
-        return prd;
+  saveProductDetails(product: Product): void{
+    const productIndex = this.products.findIndex(prd => {
+        return prd.id === product.id;
     });
+    if(typeof productIndex === 'number' )
+        this.products.splice(productIndex, 1, product);
+
+    console.log(this.products);
   }
 }

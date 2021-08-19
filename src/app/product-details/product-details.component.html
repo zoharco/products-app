@@ -1,21 +1,35 @@
-<fieldset *ngIf="product" class="product-details">
-    <legend>Edit {{ product.name }}</legend>
-    <form action="">
-        <img src="" alt="">
-        <div>
-            <label for="name">Name</label><br>
-            <input id="name" name="name"  type="text" [(ngModel)]="product.name">
+<fieldset *ngIf="selectedProduct" class="product-details" [hidden]="submitted">
+    <legend>Edit {{ selectedProduct.name }}</legend>
+    <form *ngIf="editProductForm" [formGroup]="editProductForm" (ngSubmit)="onSubmit()">
+        <div class="image-wrap">
+            <img src="../../assets/images/{{selectedProduct.image}}" alt="{{selectedProduct.name}}">
         </div>
-        <div>
+
+        <div class="form-control-wrap">
+            <label for="name">Name</label>
+            <input id="name" type="text" formControlName="name" name="name">
+        </div>
+
+        <div class="form-control-wrap">
             <label for="description">Description</label><br>
-            <textarea id="description" name="description" [(ngModel)]="product.description" cols="30" rows="10"></textarea>
+            <textarea id="description" formControlName="description" name="description" cols="30" rows="10"></textarea><br>
         </div>
-        <div>
-            <label for="price">Price</label>
-            <input id="price" name="price" [(ngModel)]="product.price" type="text">
+
+        <div class="form-control-wrap">
+            <label for="price">Price</label><br>
+            <input id="price" formControlName="price" name="price" type="number"><br>
         </div>
-        <div >
-            <button class="save" (click)="saveDetails()">Save</button>
+
+        <div class="btn-wrap">
+            <button class="btn-save" type="submit" [disabled]="!editProductForm.valid">Save</button>
         </div>
     </form>
 </fieldset>
+<!--
+
+    1. move label+input to new component
+    2. wrap img,labal+input with div
+    3. use br only with text
+    4. 
+  -->
+

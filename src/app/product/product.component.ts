@@ -9,7 +9,7 @@ import { Product } from '../models/models';
 export class ProductComponent implements OnInit {
   @Input() product: Product | undefined;
   @Output() deleteProduct = new EventEmitter<number>();
-  @Output() editProduct = new EventEmitter<number>();
+  @Output() editProduct = new EventEmitter<Product>();
 
   constructor() {}
 
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
 
   edit(): void {
     if (this.product) 
-        this.editProduct.emit(this.product.id);
+        this.editProduct.emit(this.product);
   }
 
   delete() {
